@@ -34,6 +34,7 @@ So the general syntax of a rule_set_entry look like this:
 * rule_set,_RULE_ID_,_IF_STATE_,_WRITE_THAT_,_MOVE_HEAD(-1,0,+1)_,_NEXT_RULE_
 
 # SAMPLE PROGRAM - ADD ONE TO A BIN-NUMBER
+```
   * const char* turing_add_one_program = "tape_size,32\n"
 * "start_head_pos,3\n"
 * "start_rule,0\n"
