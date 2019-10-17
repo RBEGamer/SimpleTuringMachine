@@ -11,9 +11,9 @@ The programming synta is easy and you can define further settings like:
 * Head start position
 
 # SYNTAX
-* tape_size,_SIZE_
-* start_rule,_RULE_ID_
-* tape_conf,_STATE_TO_SET,_POS_1_(,_POS_2_,...)\n
+* `tape_size,_SIZE_`
+* `start_rule,_RULE_ID_`
+* `tape_conf,_STATE_TO_SET,_POS_1_(,_POS_2_,...)\n`
 
 A rule is a set of IF STATE THEN WRITE statements = rule_set_entry
 Every rule_set_entry with the same id belongs to a ruleset.
@@ -23,15 +23,15 @@ So for example :
 For this example, the rule_set has 2 entries.
 
 These will look like this:
-* rule_set,0,0,1,0,0
-* rule_set,0,1,0,0,0
+* `rule_set,0,0,1,0,0`
+* `rule_set,0,1,0,0,0`
 
 with head movement (move +1):
-* rule_set,0,0,1,0,1
-* rule_set,0,1,0,0,1
+* `rule_set,0,0,1,0,1`
+* `rule_set,0,1,0,0,1`
 
 So the general syntax of a rule_set_entry look like this:
-* rule_set,_RULE_ID_,_IF_STATE_,_WRITE_THAT_,_MOVE_HEAD(-1,0,+1)_,_NEXT_RULE_
+* `rule_set,_RULE_ID_,_IF_STATE_,_WRITE_THAT_,_MOVE_HEAD(-1,0,+1)_,_NEXT_RULE_
 
 # SAMPLE PROGRAM - ADD ONE TO A BIN-NUMBER
 ```cpp
