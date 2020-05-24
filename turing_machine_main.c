@@ -4,30 +4,21 @@
 
 /*
 Turing Coding Challange
-
 RULES (inspirated by github/wridgers)
-
 ->singlefile
 ->determanistic 1 tape machine
-
-
 ->alphabet -> -1=blank, 0-int normal chars
 ->states 0-int
-
-
 STATE DESC
 ->see sample program below for syntax
-
 */
 
-#include "stdafx.h"
-
 #include <iostream>
+#include <string.h>
 
 //DEFINITIONS
 struct STATE_DESC;
 struct STATE_RULE;
-enum STATE_CONTROL;
 struct TAPE_DESC;
 
 
@@ -133,7 +124,6 @@ TAPE_DESC tape;
 
 /*
 PROGRAM : ADD ONE TO BINARY
-
 syntax:
 tape_size,<size of tape> //size of tape
 start_head_pos,<start of the rw head> //start pos of the head
@@ -508,4 +498,3 @@ int main()
 	std::cin >> a;
     return 0;
 }
-
