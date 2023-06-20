@@ -37,7 +37,7 @@ struct STATE_RULE
 	int write_new_char; //writes the new char to the cell
 	int new_state_id;
 	STATE_DESC* parent_state_desc;
-	//simple debug funktion
+	//simple debug function
 	 void print_step(){
 		std::cout << "ON:" << switch_on_char << "->" << write_new_char << ",MOVE:" << move_tape_dir << " GOTO:"<< new_state_id << std::endl;
 	}
@@ -49,7 +49,7 @@ struct STATE_DESC
 	STATE_RULE* state_rules;
 	unsigned int state_rules_count;
 	//CLEANUP
-	void destroy_state_rules() {
+	~STATE_DESC() {
 		delete state_rules;
 		state_rules = NULL;
 		state_rules_count = 0;
@@ -76,7 +76,7 @@ struct TAPE_DESC
 		max_reached_tape_position = 1;
 	}
 
-	void destroy_tape() {
+	~TAPE_DESC() {
 		delete tape_cells;
 		tape_cells = NULL;
 	}
@@ -485,13 +485,8 @@ int main()
 
 
 	//CLEANUP SHIT
-	for (size_t i = 0; i < rs_u_id_counter; i++)
-	{
-		states[i].destroy_state_rules();
-	}
 	delete[] states;
 	states = NULL;
-	tape.destroy_tape();
 	delete[] found_id_count;
 
 	char a = 0;
