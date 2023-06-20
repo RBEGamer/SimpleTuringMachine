@@ -37,7 +37,7 @@ struct STATE_RULE
 	int write_new_char; //writes the new char to the cell
 	int new_state_id;
 	STATE_DESC* parent_state_desc;
-	//simple debug funktion
+	//simple debug function
 	 void print_step(){
 		std::cout << "ON:" << switch_on_char << "->" << write_new_char << ",MOVE:" << move_tape_dir << " GOTO:"<< new_state_id << std::endl;
 	}
