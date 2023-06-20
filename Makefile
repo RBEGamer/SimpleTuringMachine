@@ -1,2 +1,2 @@
 main:
-	gcc turing_machine_main.c -o simple_turing_machine
+	g++ turing_machine_main.cpp -o simple_turing_machine
