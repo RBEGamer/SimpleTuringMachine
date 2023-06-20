@@ -49,7 +49,7 @@ struct STATE_DESC
 	STATE_RULE* state_rules;
 	unsigned int state_rules_count;
 	//CLEANUP
-	void destroy_state_rules() {
+	~STATE_DESC() {
 		delete state_rules;
 		state_rules = NULL;
 		state_rules_count = 0;
@@ -485,10 +485,6 @@ int main()
 
 
 	//CLEANUP SHIT
-	for (size_t i = 0; i < rs_u_id_counter; i++)
-	{
-		states[i].destroy_state_rules();
-	}
 	delete[] states;
 	states = NULL;
 	tape.destroy_tape();
