@@ -76,7 +76,7 @@ struct TAPE_DESC
 		max_reached_tape_position = 1;
 	}
 
-	void destroy_tape() {
+	~TAPE_DESC() {
 		delete tape_cells;
 		tape_cells = NULL;
 	}
@@ -487,7 +487,6 @@ int main()
 	//CLEANUP SHIT
 	delete[] states;
 	states = NULL;
-	tape.destroy_tape();
 	delete[] found_id_count;
 
 	char a = 0;
